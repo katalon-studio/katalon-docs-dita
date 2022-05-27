@@ -1,6 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+// require('dotenv').config();
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -8,13 +10,21 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Katalon docs',
   tagline: '',
-  url: 'https://nostalgic-babbage-c2a210.netlify.app/',
+  url: 'https://docs.katalon.com',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   favicon: 'img/logo.svg',
-  organizationName: 'will-nguyenpham', // Usually your GitHub org/user name.
-  projectName: 'docusaurus-demo', // Usually your repo name.
+  organizationName: 'Katalon',
+  projectName: 'Katalon Docs',
   trailingSlash: false,
+  customFields: {
+    // "appId": process.env.APPLICATION_ID,
+    // "indexName": process.env.INDEX_NAME,
+    // "apiKey": process.env.API_KEY_SEARCH,
+    "appId": "5E7YZB1TD0",
+    "indexName": "docs_dita",
+    "apiKey": "719e4773c20547dc1c567a1ffc409f29",
+  },
   presets: [
     [
       'classic',
@@ -23,7 +33,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/will-nguyenpham/docusaurus-demo/',
+          editUrl: 'https://github.com/katalon-studio/katalon-docs-dita/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
@@ -35,6 +45,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+            autoCollapseCategories: true,
+            hideable: true,
+        },
+      },
       navbar: {
         title: 'Katalon Docs',
         hideOnScroll: true,
@@ -48,10 +64,22 @@ const config = {
             position: 'left',
           },
           {
-            href: '/docs',
+            type: 'dropdown',
             position: 'right',
-            label: 'Docs',
+            label: 'API Docs',
             className: 'bar-items-text',
+            items: [
+                {
+                    label: 'Katalon Studio',
+                    to: 'https://docs.katalon.com/javadoc/index.html',
+                    className: 'bar-items-text',
+                },
+                {
+                    label: 'Katalon TestOps',
+                    to: 'docs/katalon-testops/rest-api',
+                    className: 'bar-items-text',
+                },
+            ]
           },
           {
             to: 'https://forum.katalon.com/',
@@ -60,7 +88,7 @@ const config = {
             className: 'bar-items-text',
           },
           {
-            to: 'https://academy.katalon.com/',
+            to: 'https://academy.katalon.com/?utm_source=menu&utm_medium=docs',
             label: 'Academy',
             position: 'right',
             className: 'bar-items-text',
@@ -74,10 +102,12 @@ const config = {
         ],
       },
       algolia: {
-        appId: 'UQL9BM5A25',
-        indexName: 'docs',
-        apiKey: '143af23005cba6484bb0f68b4509db5f',
-        // apiKey: '42323feb6cc5bf9d608e53f4aeacae36',
+        // appId: process.env.APPLICATION_ID,
+        // indexName: process.env.INDEX_NAME,
+        // apiKey: process.env.API_KEY_SEARCH,
+        appId: "5E7YZB1TD0",
+        indexName: "docs_dita",
+        apiKey: "719e4773c20547dc1c567a1ffc409f29",
   
         // Optional: see doc section bellow
         contextualSearch: false,
@@ -229,8 +259,6 @@ const config = {
           }
         }
       },
-      autoCollapseSidebarCategories: true,
-      hideableSidebar: true,
     }),
 
   plugins: [
@@ -407,12 +435,12 @@ const config = {
                   "/katalon-recorder/docs/selenese-selenium-ide-commands-reference/"
               ]
           },
-          {
-              to: "/docs/katalon-recorder/get-your-job-done/automate-scenarios/how-to-write-and-extract-data-in-a-test-case",
-              from: [
-                  "/katalon-recorder/docs/write-and-extract-data.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-recorder/get-your-job-done/automate-scenarios/how-to-write-and-extract-data-in-a-test-case",
+        //       from: [
+        //           "/katalon-recorder/docs/write-and-extract-data.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-recorder/get-your-job-done/data-driven-testing/data-driven-testing-in-katalon-recorder",
               from: [
@@ -530,12 +558,12 @@ const config = {
                   "/katalon-recorder/docs/faq-and-troubleshooting-instructions/"
               ]
           },
-          {
-              to: "/docs/katalon-recorder/get-your-job-done/execute-scenarios/use-the-commande-line-runner",
-              from: [
-                  "/katalon-recorder/docs/command-line-runner.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-recorder/get-your-job-done/execute-scenarios/use-the-commande-line-runner",
+        //       from: [
+        //           "/katalon-recorder/docs/command-line-runner.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-recorder/get-your-job-done/execute-scenarios/use-the-self-healing-function",
               from: [
@@ -862,74 +890,74 @@ const config = {
                   "/katalon-studio/docs/using-autoit-for-authentication-in-katalon-studio/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/tips-from-our-community/connect-to-sql-using-windows-authentication",
-              from: [
-                  "/katalon-studio/docs/connect-to-sql-using-windows-authentication.html",
-                  "/display/KD/Connect+to+SQL+using+Windows+Authentication/",
-                  "/display/KD/Connect%20to%20SQL%20using%20Windows%20Authentication/",
-                  "/x/UAXR/",
-                  "/katalon-studio/docs/connect-to-sql-using-windows-authentication/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/tips-from-our-community/force-stop-execution",
-              from: [
-                  "/katalon-studio/docs/force-stop-execution.html",
-                  "/display/KD/Force+stop+execution/",
-                  "/display/KD/Force%20stop%20execution/",
-                  "/x/HgfR/",
-                  "/katalon-studio/docs/force-stop-execution/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/tips-from-our-community/get-sql-query-results-as-variables",
-              from: [
-                  "/katalon-studio/docs/get-sql-query-results-as-variables.html",
-                  "/display/KD/Get+SQL+query+results+as+variables/",
-                  "/display/KD/Get%20SQL%20query%20results%20as%20variables/",
-                  "/x/RQXR/",
-                  "/katalon-studio/docs/get-sql-query-results-as-variables/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/tips-from-our-community/handle-file-upload-control-on-hidden-input",
-              from: [
-                  "/katalon-studio/docs/handle-file-upload-control-on-hidden-input.html",
-                  "/display/KD/Handle+file+upload+control+on+hidden+input/",
-                  "/display/KD/Handle%20file%20upload%20control%20on%20hidden%20input/",
-                  "/x/eQXR/",
-                  "/katalon-studio/docs/handle-file-upload-control-on-hidden-input/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/tips-from-our-community/open-chrome-with-extensions",
-              from: [
-                  "/katalon-studio/docs/open-chrome-with-extensions.html",
-                  "/display/KD/Open+Chrome+with+extensions/",
-                  "/display/KD/Open%20Chrome%20with%20extensions/",
-                  "/x/YwXR/",
-                  "/katalon-studio/docs/open-chrome-with-extensions/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/tips-from-our-community/retrieve-chromedriver.log-and-firefoxdriver.log-when-you-run-recordspy",
-              from: [
-                  "/katalon-studio/docs/retrieve-chromedriverlog-and-firefoxdriverlog-when-you-run-recordspy.html",
-                  "/x/cAXR/",
-                  "/katalon-studio/docs/retrieve-chromedriverlog-and-firefoxdriverlog-when-you-run-recordspy/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/tips-from-our-community/retrieve-os-browser-and-screen-resolution-of-the-machine-perfoming-tests",
-              from: [
-                  "/katalon-studio/docs/retrieve-os-browser-and-screen-resolution-of-the-machine-perfoming-tests.html",
-                  "/display/KD/Retrieve+OS%2C+browser+and+screen+resolution+of+the+machine+perfoming+tests/",
-                  "/display/KD/Retrieve%20OS%2C%20browser%20and%20screen%20resolution%20of%20the%20machine%20perfoming%20tests/",
-                //   "/x/XgXR/",
-                  "/katalon-studio/docs/retrieve-os-browser-and-screen-resolution-of-the-machine-perfoming-tests/"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/tips-from-our-community/connect-to-sql-using-windows-authentication",
+        //       from: [
+        //           "/katalon-studio/docs/connect-to-sql-using-windows-authentication.html",
+        //           "/display/KD/Connect+to+SQL+using+Windows+Authentication/",
+        //           "/display/KD/Connect%20to%20SQL%20using%20Windows%20Authentication/",
+        //           "/x/UAXR/",
+        //           "/katalon-studio/docs/connect-to-sql-using-windows-authentication/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/tips-from-our-community/force-stop-execution",
+        //       from: [
+        //           "/katalon-studio/docs/force-stop-execution.html",
+        //           "/display/KD/Force+stop+execution/",
+        //           "/display/KD/Force%20stop%20execution/",
+        //           "/x/HgfR/",
+        //           "/katalon-studio/docs/force-stop-execution/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/tips-from-our-community/get-sql-query-results-as-variables",
+        //       from: [
+        //           "/katalon-studio/docs/get-sql-query-results-as-variables.html",
+        //           "/display/KD/Get+SQL+query+results+as+variables/",
+        //           "/display/KD/Get%20SQL%20query%20results%20as%20variables/",
+        //           "/x/RQXR/",
+        //           "/katalon-studio/docs/get-sql-query-results-as-variables/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/tips-from-our-community/handle-file-upload-control-on-hidden-input",
+        //       from: [
+        //           "/katalon-studio/docs/handle-file-upload-control-on-hidden-input.html",
+        //           "/display/KD/Handle+file+upload+control+on+hidden+input/",
+        //           "/display/KD/Handle%20file%20upload%20control%20on%20hidden%20input/",
+        //           "/x/eQXR/",
+        //           "/katalon-studio/docs/handle-file-upload-control-on-hidden-input/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/tips-from-our-community/open-chrome-with-extensions",
+        //       from: [
+        //           "/katalon-studio/docs/open-chrome-with-extensions.html",
+        //           "/display/KD/Open+Chrome+with+extensions/",
+        //           "/display/KD/Open%20Chrome%20with%20extensions/",
+        //           "/x/YwXR/",
+        //           "/katalon-studio/docs/open-chrome-with-extensions/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/tips-from-our-community/retrieve-chromedriver.log-and-firefoxdriver.log-when-you-run-recordspy",
+        //       from: [
+        //           "/katalon-studio/docs/retrieve-chromedriverlog-and-firefoxdriverlog-when-you-run-recordspy.html",
+        //           "/x/cAXR/",
+        //           "/katalon-studio/docs/retrieve-chromedriverlog-and-firefoxdriverlog-when-you-run-recordspy/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/tips-from-our-community/retrieve-os-browser-and-screen-resolution-of-the-machine-perfoming-tests",
+        //       from: [
+        //           "/katalon-studio/docs/retrieve-os-browser-and-screen-resolution-of-the-machine-perfoming-tests.html",
+        //           "/display/KD/Retrieve+OS%2C+browser+and+screen+resolution+of+the+machine+perfoming+tests/",
+        //           "/display/KD/Retrieve%20OS%2C%20browser%20and%20screen%20resolution%20of%20the%20machine%20perfoming%20tests/",
+        //         //   "/x/XgXR/",
+        //           "/katalon-studio/docs/retrieve-os-browser-and-screen-resolution-of-the-machine-perfoming-tests/"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/error-management/test-maintenance/decompile-class-file-for-debugging",
               from: [
@@ -959,51 +987,51 @@ const config = {
                   "/katalon-studio/docs/time-capsule.html"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/known-issues",
-              from: [
-                  "/katalon-studio/docs/known-issues-limitations.html",
-                  "/x/yIMw/",
-                  "/katalon-studio/docs/known-issues-limitations/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/troubleshoot-web-automated-testing",
-              from: [
-                  "/katalon-studio/docs/troubleshoot-common-execution-exceptions-web-test.html",
-                  "/display/KD/Troubleshooting+common+issues+related+to+interacting+with+an+element/",
-                  "/display/KD/Troubleshooting%20common%20issues%20related%20to%20interacting%20with%20an%20element/",
-                  "/x/awXR/",
-                  "/katalon-studio/docs/troubleshooting-common-issues-related-to-interacting-with-an-element/",
-                  "/katalon-studio/docs/troubleshooting-common-issues-related-to-interacting-with-an-element.html",
-                  "/display/KD/troubleshooting+web+automated+testing/",
-                  "/display/KD/troubleshooting%20web%20automated%20testing/",
-                  "/katalon-studio/docs/troubleshooting-web-automated-testing/",
-                  "/katalon-studio/docs/troubleshooting-web-automated-testing.html"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/troubleshoot-windows-automated-testing",
-              from: [
-                  "/katalon-studio/docs/troubleshoot-common-execution-exceptions-windows.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/known-issues",
+        //       from: [
+        //           "/katalon-studio/docs/known-issues-limitations.html",
+        //           "/x/yIMw/",
+        //           "/katalon-studio/docs/known-issues-limitations/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/troubleshoot-web-automated-testing",
+        //       from: [
+        //           "/katalon-studio/docs/troubleshoot-common-execution-exceptions-web-test.html",
+        //           "/display/KD/Troubleshooting+common+issues+related+to+interacting+with+an+element/",
+        //           "/display/KD/Troubleshooting%20common%20issues%20related%20to%20interacting%20with%20an%20element/",
+        //           "/x/awXR/",
+        //           "/katalon-studio/docs/troubleshooting-common-issues-related-to-interacting-with-an-element/",
+        //           "/katalon-studio/docs/troubleshooting-common-issues-related-to-interacting-with-an-element.html",
+        //           "/display/KD/troubleshooting+web+automated+testing/",
+        //           "/display/KD/troubleshooting%20web%20automated%20testing/",
+        //           "/katalon-studio/docs/troubleshooting-web-automated-testing/",
+        //           "/katalon-studio/docs/troubleshooting-web-automated-testing.html"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/troubleshoot-windows-automated-testing",
+        //       from: [
+        //           "/katalon-studio/docs/troubleshoot-common-execution-exceptions-windows.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/troubleshoot-common-exceptions",
               from: [
                   "/katalon-studio/docs/troubleshooting.html"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/troubleshoot-mobile-automated-testing",
-              from: [
-                  "/katalon-studio/docs/troubleshooting-automated-mobile-testing.html",
-                  "/display/KD/Troubleshooting+automated+mobile+testing/",
-                  "/display/KD/Troubleshooting%20automated%20mobile%20testing/",
-                  "/x/fBdO/",
-                  "/katalon-studio/docs/troubleshooting-automated-mobile-testing/"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/error-management/troubleshooting/troubleshoot-mobile-automated-testing",
+        //       from: [
+        //           "/katalon-studio/docs/troubleshooting-automated-mobile-testing.html",
+        //           "/display/KD/Troubleshooting+automated+mobile+testing/",
+        //           "/display/KD/Troubleshooting%20automated%20mobile%20testing/",
+        //           "/x/fBdO/",
+        //           "/katalon-studio/docs/troubleshooting-automated-mobile-testing/"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/set-up-katalon-studio/installation/installation-overview",
               from: [
@@ -1129,12 +1157,12 @@ const config = {
                   "/katalon-studio/docs/sample-custom-keywords/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/extend-katalon-studio/javadoc",
-              from: [
-                  "/katalon-studio/docs/javadoc.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/extend-katalon-studio/javadoc",
+        //       from: [
+        //           "/katalon-studio/docs/javadoc.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/extend-katalon-studio/katalon-studio-plugins/auto-healing-smart-xpath",
               from: [
@@ -1363,55 +1391,55 @@ const config = {
                   "/katalon-studio/docs/git-integration-submodule.html"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/integration/kobiton-integration",
-              from: [
-                  "/katalon-studio/docs/integrate_with_kobiton.html",
-                  "/katalon-studio/tutorials/integrate_with_kobiton.html",
-                  "/katalon-studio/docs/desired-capabilities-for-kobiton-devices.html",
-                  "/display/KD/Desired+Capabilities+for+Kobiton+Devices/",
-                  "/display/KD/Desired%20Capabilities%20for%20Kobiton%20Devices/",
-                  "/x/DQrR/",
-                  "/katalon-studio/docs/desired-capabilities-for-kobiton-devices/",
-                //   "/display/KD/Desired+capabilities+for+Kobiton+devices/",
-                  "/katalon-studio/docs/use-additional-desired-capabilities-for-kobiton-devices.html/",
-                  "/katalon-studio/docs/enable-kobiton-integration.html",
-                  "/display/KD/Enable+Kobiton+Integration/",
-                  "/display/KD/Enable%20Kobiton%20Integration/",
-                  "/display/KD/Kobiton+Integration/",
-                  "/display/KD/Kobiton%20Integration/",
-                  "/x/7IEw/",
-                  "/katalon-studio/docs/enable-kobiton-integration/"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/integration/jira-integration/jira-integration",
-              from: [
-                  "/katalon-studio/docs/jira-integration.html",
-                  "/katalon-studio/docs/configure-jira-integration/",
-                  "/katalon-studio/docs/BDD-field-jira-cloud/",
-                  "/katalon-studio/docs/install-and-use-katalons-jira-add-on/",
-                  "/display/KD/Install+and+Use+Katalon%27s+JIRA+add-on/",
-                  "/display/KD/Install%20and%20Use%20Katalon%27s%20JIRA%20add-on/",
-                  "/x/TBBO/",
-                  "/katalon-studio/docs/working-with-jira/",
-                  "/display/KD/Configure+JIRA+Integration/",
-                  "/display/KD/Configure%20JIRA%20Integration/",
-                  "/x/7oEw/",
-                  "/display/KD/JIRA%20Integration/",
-                  "/display/KD/Working+with+JIRA/",
-                  "/display/KD/Working%20with%20JIRA/",
-                  "/x/MhBO/",
-                  "/katalon-studio/docs/jira-plugin-integration.html",
-                  "/katalon-studio/tutorials/katalon_studio_integration_with_jira_overview.html"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/integration/katalon-api-keys",
-              from: [
-                  "/katalon-studio/docs/katalon-apikey-70.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/integration/kobiton-integration",
+        //       from: [
+        //           "/katalon-studio/docs/integrate_with_kobiton.html",
+        //           "/katalon-studio/tutorials/integrate_with_kobiton.html",
+        //           "/katalon-studio/docs/desired-capabilities-for-kobiton-devices.html",
+        //           "/display/KD/Desired+Capabilities+for+Kobiton+Devices/",
+        //           "/display/KD/Desired%20Capabilities%20for%20Kobiton%20Devices/",
+        //           "/x/DQrR/",
+        //           "/katalon-studio/docs/desired-capabilities-for-kobiton-devices/",
+        //         //   "/display/KD/Desired+capabilities+for+Kobiton+devices/",
+        //           "/katalon-studio/docs/use-additional-desired-capabilities-for-kobiton-devices.html/",
+        //           "/katalon-studio/docs/enable-kobiton-integration.html",
+        //           "/display/KD/Enable+Kobiton+Integration/",
+        //           "/display/KD/Enable%20Kobiton%20Integration/",
+        //           "/display/KD/Kobiton+Integration/",
+        //           "/display/KD/Kobiton%20Integration/",
+        //           "/x/7IEw/",
+        //           "/katalon-studio/docs/enable-kobiton-integration/"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/integration/jira-integration/jira-integration",
+        //       from: [
+        //           "/katalon-studio/docs/jira-integration.html",
+        //           "/katalon-studio/docs/configure-jira-integration/",
+        //           "/katalon-studio/docs/BDD-field-jira-cloud/",
+        //           "/katalon-studio/docs/install-and-use-katalons-jira-add-on/",
+        //           "/display/KD/Install+and+Use+Katalon%27s+JIRA+add-on/",
+        //           "/display/KD/Install%20and%20Use%20Katalon%27s%20JIRA%20add-on/",
+        //           "/x/TBBO/",
+        //           "/katalon-studio/docs/working-with-jira/",
+        //           "/display/KD/Configure+JIRA+Integration/",
+        //           "/display/KD/Configure%20JIRA%20Integration/",
+        //           "/x/7oEw/",
+        //           "/display/KD/JIRA%20Integration/",
+        //           "/display/KD/Working+with+JIRA/",
+        //           "/display/KD/Working%20with%20JIRA/",
+        //           "/x/MhBO/",
+        //           "/katalon-studio/docs/jira-plugin-integration.html",
+        //           "/katalon-studio/tutorials/katalon_studio_integration_with_jira_overview.html"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/integration/katalon-api-keys",
+        //       from: [
+        //           "/katalon-studio/docs/katalon-apikey-70.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/integration/combine-katalon-studio-with-sap-scripting-tracker-for-windows",
               from: [
@@ -1494,33 +1522,33 @@ const config = {
                   "/katalon-studio/docs/testlink-integration.html"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/integration/testops-integration/upload-test-results-to-katalon-testops-from-katalon-studio",
-              from: [
-                  "/katalon-studio/docs/katalon-analytics-beta-integration.html",
-                  "/display/KD/Katalon+Analytics+%28Beta%29+Integration/",
-                  "/display/KD/Katalon%20Analytics%20%28Beta%29%20Integration/",
-                  "/x/KRhO/",
-                  "/display/KA/Integration+with+Katalon+Studio/",
-                  "/display/KA/Integration%20with%20Katalon%20Studio/",
-                  "/katalon-analytics/docs/ka-integration-katalon-studio/",
-                  "/katalon-analytics/docs/ka-integration-katalon-studio.html",
-                  "/katalon-analytics/docs/view-reports/",
-                  "/x/mw3R/",
-                  "/katalon-analytics/docs/integration-with-katalon-studio.html",
-                  "/katalon-analytics/docs/upload-reports-overview.html",
-                  "/katalon-analytics/docs/project-management-import-KS.html",
-                  "/katalon-analytics/docs/ks_upload_project_kt.html"
-              ]
-          },
-          {
-              to: "/docs/katalon-studio-enterprise/integration/testops-integration/testops-overview",
-              from: [
-                  "/katalon-studio/docs/testops-integration.html",
-                  "/katalon-studio/docs/execute_tests_periodically_on_remote_machines.html",
-                  "/katalon-studio/docs/view-execution-list.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/integration/testops-integration/upload-test-results-to-katalon-testops-from-katalon-studio",
+        //       from: [
+        //           "/katalon-studio/docs/katalon-analytics-beta-integration.html",
+        //           "/display/KD/Katalon+Analytics+%28Beta%29+Integration/",
+        //           "/display/KD/Katalon%20Analytics%20%28Beta%29%20Integration/",
+        //           "/x/KRhO/",
+        //           "/display/KA/Integration+with+Katalon+Studio/",
+        //           "/display/KA/Integration%20with%20Katalon%20Studio/",
+        //           "/katalon-analytics/docs/ka-integration-katalon-studio/",
+        //           "/katalon-analytics/docs/ka-integration-katalon-studio.html",
+        //           "/katalon-analytics/docs/view-reports/",
+        //           "/x/mw3R/",
+        //           "/katalon-analytics/docs/integration-with-katalon-studio.html",
+        //           "/katalon-analytics/docs/upload-reports-overview.html",
+        //           "/katalon-analytics/docs/project-management-import-KS.html",
+        //           "/katalon-analytics/docs/ks_upload_project_kt.html"
+        //       ]
+        //   },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/integration/testops-integration/testops-overview",
+        //       from: [
+        //           "/katalon-studio/docs/testops-integration.html",
+        //           "/katalon-studio/docs/execute_tests_periodically_on_remote_machines.html",
+        //           "/katalon-studio/docs/view-execution-list.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/integration/testrail-integration",
               from: [
@@ -2060,12 +2088,12 @@ const config = {
                   "/katalon-studio/docs/handle-response-messages/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/test-design/web-services-test-design/import-web-service-objects/import-rest-api-requests-with-openapi-specification-3.0",
-              from: [
-                  "/katalon-studio/docs/import-openapi30.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/test-design/web-services-test-design/import-web-service-objects/import-rest-api-requests-with-openapi-specification-3.0",
+        //       from: [
+        //           "/katalon-studio/docs/import-openapi30.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/test-design/web-services-test-design/import-web-service-objects/import-restful-from-postman",
               from: [
@@ -2082,16 +2110,16 @@ const config = {
                   "/katalon-studio/docs/import-rest-requests-from-swagger-20/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/test-design/web-services-test-design/import-web-service-objects/import-soap-requests-from-wsdls",
-              from: [
-                  "/katalon-studio/docs/import-soap-requests-from-wsdl.html",
-                  "/display/KD/Import+SOAP+requests+from+WSDL/",
-                  "/display/KD/Import%20SOAP%20requests%20from%20WSDL/",
-                  "/x/BhbR/",
-                  "/katalon-studio/docs/import-soap-requests-from-wsdl/"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/test-design/web-services-test-design/import-web-service-objects/import-soap-requests-from-wsdls",
+        //       from: [
+        //           "/katalon-studio/docs/import-soap-requests-from-wsdl.html",
+        //           "/display/KD/Import+SOAP+requests+from+WSDL/",
+        //           "/display/KD/Import%20SOAP%20requests%20from%20WSDL/",
+        //           "/x/BhbR/",
+        //           "/katalon-studio/docs/import-soap-requests-from-wsdl/"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/test-design/web-services-test-design/import-web-service-objects/import-web-service-requests-from-soapui",
               from: [
@@ -2687,16 +2715,16 @@ const config = {
                   "/katalon-studio/docs/mobile-press-home/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/keywords/mobile-keywords/mobile-run-ios-app-in-background-and-wait",
-              from: [
-                  "/katalon-studio/docs/mobile-run-ios-app-in-background-and-wait.html",
-                  "/display/KD/%5BMobile%5D+Run+iOS+App+in+Background+and+Wait/",
-                  "/display/KD/%5BMobile%5D%20Run%20iOS%20App%20in%20Background%20and%20Wait/",
-                  "/x/pI0Y/",
-                  "/katalon-studio/docs/mobile-run-ios-app-in-background-and-wait/"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/keywords/mobile-keywords/mobile-run-ios-app-in-background-and-wait",
+        //       from: [
+        //           "/katalon-studio/docs/mobile-run-ios-app-in-background-and-wait.html",
+        //           "/display/KD/%5BMobile%5D+Run+iOS+App+in+Background+and+Wait/",
+        //           "/display/KD/%5BMobile%5D%20Run%20iOS%20App%20in%20Background%20and%20Wait/",
+        //           "/x/pI0Y/",
+        //           "/katalon-studio/docs/mobile-run-ios-app-in-background-and-wait/"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/test-design/web-test-design/web-test-objects/detecting-objects-with-xpath",
               from: [
@@ -3895,17 +3923,17 @@ const config = {
                   "/katalon-studio/docs/webui-get-element-width/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/deprecated-documentation/jenkins-integration",
-              from: [
-                  "/katalon-studio/docs/jenkins-integration.html",
-                  "/display/KD/Jenkins+Integration/",
-                  "/display/KD/Jenkins%20Integration/",
-                  "/x/XwAM/",
-                  "/katalon-studio/docs/jenkins-integration/",
-                  "/katalon-studio/tutorials/jenkins_ci_integration.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/deprecated-documentation/jenkins-integration",
+        //       from: [
+        //           "/katalon-studio/docs/jenkins-integration.html",
+        //           "/display/KD/Jenkins+Integration/",
+        //           "/display/KD/Jenkins%20Integration/",
+        //           "/x/XwAM/",
+        //           "/katalon-studio/docs/jenkins-integration/",
+        //           "/katalon-studio/tutorials/jenkins_ci_integration.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/keywords/web-ui-keywords/webui-get-number-of-selected-option",
               from: [
@@ -3916,14 +3944,14 @@ const config = {
                   "/katalon-studio/docs/webui-get-number-of-selected-option/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/deprecated-documentation/vststfsvso-integration",
-              from: [
-                  "/katalon-studio/docs/vststfsvso-integration.html",
-                  "/x/kwnR/",
-                  "/katalon-studio/docs/vststfsvso-integration/"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/deprecated-documentation/vststfsvso-integration",
+        //       from: [
+        //           "/katalon-studio/docs/vststfsvso-integration.html",
+        //           "/x/kwnR/",
+        //           "/katalon-studio/docs/vststfsvso-integration/"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/test-execution/data-driven-testing/data-driven-testing-with-restful-web-service-requests",
               from: [
@@ -5252,13 +5280,13 @@ const config = {
                   "/display/KD/Spy%20Object/"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/test-design/mobile-test-design/mobile-test-objects/find-mobile-objects",
-              from: [
-                  "/katalon-studio/docs/locators_object_identification.html",
-                  "/katalon-studio/tutorials/locators_object_identification.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/test-design/mobile-test-design/mobile-test-objects/find-mobile-objects",
+        //       from: [
+        //           "/katalon-studio/docs/locators_object_identification.html",
+        //           "/katalon-studio/tutorials/locators_object_identification.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/test-design/mobile-test-design/testing-mobile-apps-using-katalon-studio-and-kobiton-cloud-based-device-farm",
               from: [
@@ -5338,26 +5366,26 @@ const config = {
                 "/katalon-store/docs/user/access-store-in-KS/"
             ]
           },
-          {
-              to: "/docs/katalon-store/manage-api-keys",
-              from: [
-                  "/katalon-store/docs/user/API-key.html",
-                  "/katalon-store/docs/user/API-key/"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-store/manage-api-keys",
+        //       from: [
+        //           "/katalon-store/docs/user/API-key.html",
+        //           "/katalon-store/docs/user/API-key/"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-store/essential-plugins-bundle",
               from: [
                   "/katalon-store/docs/user/essential-plugin-bundle.html"
               ]
           },
-          {
-              to: "/docs/katalon-store/install-use-and-review-a-plugin",
-              from: [
-                  "/katalon-store/docs/user/getting-started.html",
-                  "/katalon-store/docs/user/getting-started/"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-store/install-use-and-review-a-plugin",
+        //       from: [
+        //           "/katalon-store/docs/user/getting-started.html",
+        //           "/katalon-store/docs/user/getting-started/"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-store/overview",
               from: [
@@ -5424,12 +5452,12 @@ const config = {
                 "/katalon-studio/docs/configure-proxy.html"
             ]
         },
-        {
-            to: "/docs/products-and-licenses/katalon-studio-enterprise-and-runtime-engine-licenses/katalon-studio-vs-katalon-studio-enterprise-features",
-            from: [
-                "/katalon-studio/docs/katalon-studio-vs-katalon-studio-enterprise.html"
-            ]
-        },
+        // {
+        //     to: "/docs/products-and-licenses/katalon-studio-enterprise-and-runtime-engine-licenses/katalon-studio-vs-katalon-studio-enterprise-features",
+        //     from: [
+        //         "/katalon-studio/docs/katalon-studio-vs-katalon-studio-enterprise.html"
+        //     ]
+        // },
         {
             to: "/docs/products-and-licenses/katalon-studio-enterprise-and-runtime-engine-licenses/katalon-runtime-engine-devops-sunsetting",
             from: [
@@ -5579,54 +5607,54 @@ const config = {
                 "/katalon-analytics/docs/test-usage-balance-usage-dashboard.html"
             ]
         },
-        {
-          to: "/docs/katalon-testcloud-trial/get-started/integration-with-testops",
-          from: [
-              "/katalon-testcloud/docs/integrate-testcloud-with-testops.html"
-          ]
-        },
-        {
-            to: "/docs/katalon-testcloud-trial/get-started/testcloud-tunnel",
-            from: [
-                "/katalon-testcloud/docs/testcloud-tunnel.html"
-            ]
-        },
-        {
-            to: "/docs/katalon-testcloud-trial/get-started/usage-quota",
-            from: [
-                "/katalon-testcloud/docs/usage-quota-guide.html"
-            ]
-        },
-        {
-            to: "/docs/katalon-testcloud-trial/overview",
-            from: [
-                "/katalon-testcloud/docs/testcloud-overview.html"
-            ]
-        },
-        {
-            to: "/docs/katalon-testcloud-trial/supported-environments",
-            from: [
-                "/katalon-testcloud/docs/testcloud-supported-environments.html"
-            ]
-        },
-        {
-            to: "/docs/katalon-testcloud-trial/troubleshooting/unable-to-set-up-testcloud-tunnel-in-macos",
-            from: [
-                "/katalon-testcloud/docs/troubleshoot-macos-workaround.html"
-            ]
-        },
-        {
-            to: "/docs/katalon-testcloud-trial/troubleshooting/tests-not-loading-when-executing-with-chrome-version-9394-in-windows",
-            from: [
-                "/katalon-testcloud/docs/troubleshoot-test-execution-chrome-93-94.html"
-            ]
-        },
-        {
-            to: "/docs/katalon-testcloud-trial/release-notes",
-            from: [
-                "/katalon-testcloud/docs/release-notes.html"
-            ]
-        },
+        // {
+        //   to: "/docs/katalon-testcloud-trial/get-started/integration-with-testops",
+        //   from: [
+        //       "/katalon-testcloud/docs/integrate-testcloud-with-testops.html"
+        //   ]
+        // },
+        // {
+        //     to: "/docs/katalon-testcloud-trial/get-started/testcloud-tunnel",
+        //     from: [
+        //         "/katalon-testcloud/docs/testcloud-tunnel.html"
+        //     ]
+        // },
+        // {
+        //     to: "/docs/katalon-testcloud-trial/get-started/usage-quota",
+        //     from: [
+        //         "/katalon-testcloud/docs/usage-quota-guide.html"
+        //     ]
+        // },
+        // {
+        //     to: "/docs/katalon-testcloud-trial/overview",
+        //     from: [
+        //         "/katalon-testcloud/docs/testcloud-overview.html"
+        //     ]
+        // },
+        // {
+        //     to: "/docs/katalon-testcloud-trial/supported-environments",
+        //     from: [
+        //         "/katalon-testcloud/docs/testcloud-supported-environments.html"
+        //     ]
+        // },
+        // {
+        //     to: "/docs/katalon-testcloud-trial/troubleshooting/unable-to-set-up-testcloud-tunnel-in-macos",
+        //     from: [
+        //         "/katalon-testcloud/docs/troubleshoot-macos-workaround.html"
+        //     ]
+        // },
+        // {
+        //     to: "/docs/katalon-testcloud-trial/troubleshooting/tests-not-loading-when-executing-with-chrome-version-9394-in-windows",
+        //     from: [
+        //         "/katalon-testcloud/docs/troubleshoot-test-execution-chrome-93-94.html"
+        //     ]
+        // },
+        // {
+        //     to: "/docs/katalon-testcloud-trial/release-notes",
+        //     from: [
+        //         "/katalon-testcloud/docs/release-notes.html"
+        //     ]
+        // },
         {
           to: "/docs/katalon-testops/get-started/set-up-an-account",
           from: [
@@ -5672,12 +5700,12 @@ const config = {
                 "/katalon-analytics/docs/kt_transfer_ownership.html"
             ]
         },
-        {
-            to: "/docs/katalon-testops/get-started/join-an-organization",
-            from: [
-                "/katalon-analytics/docs/kt_users_joining_org.html"
-            ]
-        },
+        // {
+        //     to: "/docs/katalon-testops/get-started/join-an-organization",
+        //     from: [
+        //         "/katalon-analytics/docs/kt_users_joining_org.html"
+        //     ]
+        // },
         {
             to: "/docs/katalon-testops/get-started/manage-user-profile",
             from: [
@@ -5842,12 +5870,12 @@ const config = {
                 "/katalon-analytics/docs/test-run-config.html"
             ]
         },
-        {
-            to: "/docs/katalon-testops/reporting/view-testops-dashboard",
-            from: [
-                "/katalon-analytics/docs/dashboard-overview.html"
-            ]
-        },
+        // {
+        //     to: "/docs/katalon-testops/reporting/view-testops-dashboard",
+        //     from: [
+        //         "/katalon-analytics/docs/dashboard-overview.html"
+        //     ]
+        // },
         {
             to: "/docs/katalon-testops/reporting/view-re-run-test-results",
             from: [
@@ -5981,14 +6009,20 @@ const config = {
                 "/katalon-analytics/docs/kt-build.html"
             ]
         },
-        {
-            to: "/docs/katalon-testops/test-planning/releases",
-            from: [
-                "/katalon-analytics/docs/kt-release.html",
-                "/katalon-analytics/docs/release.html",
-                "/katalon-analytics/docs/kt-jira-release.html"
-            ]
-        },
+        // {
+        //     to: "/docs/katalon-testops/test-planning/releases",
+        //     from: [
+        //          "/katalon-analytics/docs/kt-release.html",
+        //          "/katalon-analytics/docs/release.html",
+        //          "/katalon-analytics/docs/kt-jira-release.html"
+        //      ]
+        // },
+        // {
+        //     to: "/docs/katalon-testops/test-planning/manage-test-runs-by-releases",
+        //     from: [
+        //          "/docs/katalon-testops/test-planning/releases",
+        //      ]
+        // },
         {
             to: "/docs/katalon-testops/test-planning/schedules/schedule-test-runs",
             from: [
@@ -5998,13 +6032,13 @@ const config = {
                 "/katalon-analytics/docs/kt-remote-execution.html"
             ]
         },
-        {
-            to: "/docs/katalon-testops/test-planning/schedules/execute-test-runs",
-            from: [
-                "/katalon-analytics/docs/kt-scheduler.html",
-                "/katalon-analytics/docs/execute-test-run.html"
-            ]
-        },
+        // {
+        //     to: "/docs/katalon-testops/test-planning/schedules/execute-test-runs",
+        //     from: [
+        //         "/katalon-analytics/docs/kt-scheduler.html",
+        //         "/katalon-analytics/docs/execute-test-run.html"
+        //     ]
+        // },
         {
             to: "/docs/katalon-testops/tutorials",
             from: [

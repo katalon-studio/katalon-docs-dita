@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
@@ -7,14 +7,9 @@ import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch } from 'react-instantsearch-hooks';
 
 import { Autocomplete, Hit } from '../components';
-import {
-  INSTANT_SEARCH_INDEX_NAME,
-} from '../constants';
 import { Hits } from '../widgets';
 import { PoweredBy } from '../components/PoweredBy';
 import styles from './index.module.scss';
-
-const searchClient = algoliasearch('UQL9BM5A25', '143af23005cba6484bb0f68b4509db5f');
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -25,12 +20,12 @@ function HomepageHeader() {
   );
 }
 
-function search(hide, setHide) {
+function search(hide, setHide, searchClient, siteConfig) {
   return (
     <div style={{ width: "45%", position: "absolute", left: 0, right: 0, margin: "auto", marginTop: "-41px" }}>
       <InstantSearch
         searchClient={searchClient}
-        indexName={INSTANT_SEARCH_INDEX_NAME}
+        indexName={siteConfig.customFields.indexName}
         routing
       >
         <Autocomplete
@@ -54,8 +49,28 @@ function search(hide, setHide) {
   );
 }
 
+var searchClient;
+
+const useScript = url => {
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = url;
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, [url]);
+};
+
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+  if (searchClient == undefined) {
+    searchClient = algoliasearch(siteConfig.customFields.appId, siteConfig.customFields.apiKey);
+  }
   const [hide, setHide] = useState(true);
 
   return (
@@ -66,7 +81,7 @@ export default function Home(): JSX.Element {
         }
       }}>
         <HomepageHeader />
-        {search(hide, setHide)}
+        {search(hide, setHide, searchClient, siteConfig)}
         <main>
           <HomepageFeatures />
         </main>

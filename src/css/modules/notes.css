@@ -4,7 +4,14 @@
   src: url("@site/static/icomoon.ttf") format("truetype");
 }
 /* Style the font containing icons preceding note captions. */
+
+.note__title {
+  visibility: hidden;
+	position: relative;
+}
+
 .note__title::before {
+  visibility: visible;
   display: inline-block;
   font-family: icomoon;
   font-size: 13px;
@@ -91,48 +98,98 @@ div.note.note_note {
   border-left: 4px solid #0083FF;
 }
 
-div.note.note_trouble {
-  background: #E8FBF0;
-  border-left: 4px solid #6BB545;
+html[data-theme='dark'] div.note.note_note {
+  background: #1C344E;
 }
 
 div.note.note_tip {
   background: #DFEBFD;
   border-left: 4px solid #0083FF;
 }
+
+html[data-theme='dark'] div.note.note_tip {
+  background: #1C344E;
+}
+
+div.note.note_trouble {
+  background: #E8FBF0;
+  border-left: 4px solid #6BB545;
+}
+
+html[data-theme='dark'] div.note.note_trouble {
+  background: #2F481D;
+}
+
 div.note.note_fastpath {
   background: #E8FBF0;
   border-left: 4px solid #6BB545;
+}
+
+html[data-theme='dark'] div.note.note_fastpath {
+  background: #2F481D;
 }
 
 div.note.note_important {
   background: #E8FBF0;
   border-left: 4px solid #6BB545;
 }
+
+html[data-theme='dark'] div.note.note_important {
+  background: #2F481D;
+}
+
 div.note.note_remember {
   background: #FDF8E3;
   border-left: 4px solid #F19035;
 }
+
+html[data-theme='dark'] div.note.note_remember {
+  background: #55421D;
+}
+
 div.note.note_restriction {
   background: #FDF8E3;
   border-left: 4px solid #F19035;
+}
+
+html[data-theme='dark'] div.note.note_restriction {
+  background: #55421D;
 }
 
 div.note.note_attention {
   background: #FDF8E3;
   border-left: 4px solid #F19035;
 }
+
+html[data-theme='dark'] div.note.note_attention {
+  background: #55421D;
+}
+
 div.note.note_caution {
   background: #FDF8E3;
   border-left: 4px solid #F19035;
 }
+
+html[data-theme='dark'] div.note.note_caution {
+  background: #55421D;
+}
+
 div.note.note_warning {
   background: #FDF8E3;
   border-left: 4px solid #F19035;
 }
+
+html[data-theme='dark'] div.note.note_warning {
+  background: #55421D;
+}
+
 div.note.note_danger {
   background: #FCECE7;
   border-left: 4px solid #D92D20;
+}
+
+html[data-theme='dark'] div.note.note_danger {
+  background: #511D1E;
 }
 
 /* Fix issues with colors of note children */
@@ -141,12 +198,112 @@ div.note * {
   color: #000000;
 }
 
+html[data-theme='dark'] div.note * {
+  color: white;
+}
+
 div.note a {
   color: #0077ED;
+}
+
+html[data-theme='dark'] div.note a {
+  color: #009EFF;
 }
 
 /* Fix issues with background colors */
 div.note code.ph.codeph,
 div.note div.pre.codeblock {
   color: #000000;
+}
+
+html[data-theme='dark'] div.note code.ph.codeph, div.note div.pre.codeblock {
+  color: white;
+}
+
+.note_fastpath > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Requirements";
+}
+
+.note_trouble > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Requirements";
+}
+
+.note_important > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Requirements";
+}
+
+.note_note > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notes";
+}
+
+.note_tip > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Tips";
+}
+
+.note_remember > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notices";
+}
+
+.note_attention > .note__title::after {
+	visibility: visible;
+  position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notices";
+}
+
+.note_restriction > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notices";
+}
+
+.note_caution > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notices";
+}
+
+.note_warning > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notice";
+}
+
+.note_danger > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Known Issues";
 }

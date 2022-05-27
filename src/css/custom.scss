@@ -8,6 +8,11 @@
 @import "modules/notes.css";
 @import "modules/custom.css";
 
+@font-face {
+  font-family: FontAwesome;
+  src: url("@site/static/FontAwesome.otf") format("truetype");
+}
+
 :root {
   --ifm-color-primary: #0077ED;
   --ifm-color-primary-dark: #006BD5;
@@ -71,4 +76,102 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+}
+
+// rating
+.rating-msg {
+  display: none;
+}
+
+.rating-icons {
+
+  * {
+    color: #243B53 !important;
+    background: unset !important;
+    display: inline-block !important;
+    float: none !important;
+    border: 1px solid #486581 !important;
+    border-radius: 28px !important;
+    padding-left: 17px !important;
+    padding-top: 10px !important;
+    width: 90px !important;
+    height: 40px !important;
+    margin-left: 10px !important;
+  }
+
+  &:hover {
+    opacity: .8;
+    .rating-nero-value {
+      font-weight: normal !important;
+    }
+  }
+
+  .rating-nero-value {
+    padding-left: 0 !important;
+    padding-right: 8px !important;
+    font-weight: normal !important;
+    display: none !important;
+  }
+
+  .rating-nero-icon {
+
+    &::before {
+      font-family: FontAwesome;
+    }
+
+    &#PDRTJS_8726954_nero_1::after {
+      font-size: 14px;
+      margin-left: 5px;
+      font-weight: 600;
+      content: 'Yes';
+    }
+
+    &#PDRTJS_8726954_nero_2::after {
+      font-size: 14px;
+      margin-left: 5px;
+      font-weight: 600;
+      content: 'No';
+    }
+
+    &#PDRTJS_8726954_nero_1::before {
+      content: "\f164";
+    }
+
+    &#PDRTJS_8726954_nero_2::before {
+      content: "\f165";
+    }
+
+    &#PDRTJS_8726954_nero_1:hover {
+      background: #E5F6FF !important;
+      border: 1px solid #0077ED !important;
+      color: #0077ED !important;
+    }
+
+    &#PDRTJS_8726954_nero_1:active {
+      background: #0077ED !important;
+      border: 1px solid #0077ED !important;
+      color: white !important;
+    }
+
+    &#PDRTJS_8726954_nero_2:hover {
+      background: #FDF3E8 !important;
+      border: 1px solid #F0821E !important;
+      color: #F0821E !important;
+    }
+
+    &#PDRTJS_8726954_nero_2:active {
+      background: #F0821E !important;
+      border: 1px solid #F0821E !important;
+      color: white !important;
+    }
+  }
+}
+
+html[data-theme='dark'] .rating-icons {
+
+  * {
+    color: white !important;
+    border: 1px solid white !important;
+  }
+
 }

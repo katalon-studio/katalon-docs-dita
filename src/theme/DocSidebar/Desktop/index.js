@@ -1,9 +1,3 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 import React from 'react';
 import clsx from 'clsx';
 import {useThemeConfig} from '@docusaurus/theme-common';
@@ -15,7 +9,9 @@ import styles from './styles.module.css';
 function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
   const {
     navbar: {hideOnScroll},
-    hideableSidebar,
+    docs: {
+      sidebar: {hideable},
+    },
   } = useThemeConfig();
   return (
     <div
@@ -26,7 +22,7 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
       )}>
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
       <Content path={path} sidebar={sidebar} />
-      {hideableSidebar && <CollapseButton onClick={onCollapse} />}
+      {hideable && <CollapseButton onClick={onCollapse} />}
     </div>
   );
 }

@@ -48,7 +48,7 @@
      </div>
    );
  }
- 
+
  export default function DocItemFooter(props) {
    const {content: DocContent} = props;
    const {metadata} = DocContent;
@@ -61,11 +61,12 @@
    if (!canDisplayFooter) {
      return null;
    }
- 
    return (
      <footer
        className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
        {canDisplayTagsRow && <TagsRow tags={tags} />}
+       {/* <div id="pd_rating_holder_8726954"></div>
+       {useScript()} */}
        {/* {canDisplayEditMetaRow && (
          <EditMetaRow
            editUrl={editUrl}
