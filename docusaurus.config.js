@@ -71,7 +71,7 @@ const config = {
             items: [
                 {
                     label: 'Katalon Studio',
-                    to: 'https://docs.katalon.com/javadoc/index.html',
+                    to: 'http://api-docs.katalon.com/',
                     className: 'bar-items-text',
                 },
                 {
@@ -269,6 +269,12 @@ const config = {
       // highlight-start
       {
         redirects: [
+          {
+            to: "/javadoc",
+            from: [
+                "/javadoc/index.html"
+            ]
+          },
           {
             to: "/docs/katalium-framework/get-started/in-other-ides",
             from: [
@@ -1209,12 +1215,12 @@ const config = {
                   "/katalon-studio/docs/test-suite-collection-scheduler.html"
               ]
           },
-          {
-              to: "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/data-driven-testing-at-test-case-level-poc",
-              from: [
-                  "/katalon-studio/docs/ddt-at-test-case-level.html"
-              ]
-          },
+        //   {
+        //       to: "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/data-driven-testing-at-test-case-level-poc",
+        //       from: [
+        //           "/katalon-studio/docs/ddt-at-test-case-level.html"
+        //       ]
+        //   },
           {
               to: "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/dependencies-management-with-native-gradle-support-poc",
               from: [
@@ -5672,15 +5678,15 @@ const config = {
                 "/katalon-analytics/docs/manage-org.html"
             ]
         },
-        {
-            to: "/docs/katalon-testops/get-started/install-testops-on-premises-with-docker",
-            from: [
-                "/katalon-analytics/docs/kt_install_premises_docker.html",
-                "/katalon-analytics/docs/kt_install_premises_docker/",
-                "/katalon-analytics/docs/ktop/",
-                "/katalon-analytics/docs/ktop.html"
-            ]
-        },
+        // {
+        //     to: "/docs/katalon-testops/get-started/install-testops-on-premises-with-docker",
+        //     from: [
+        //         "/katalon-analytics/docs/kt_install_premises_docker.html",
+        //         "/katalon-analytics/docs/kt_install_premises_docker/",
+        //         "/katalon-analytics/docs/ktop/",
+        //         "/katalon-analytics/docs/ktop.html"
+        //     ]
+        // },
         {
             to: "/docs/katalon-testops/get-started/manage-users",
             from: [
