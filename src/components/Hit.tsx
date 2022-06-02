@@ -1,6 +1,5 @@
 import React from 'react';
 import { Hit as AlgoliaHit } from '@algolia/client-search';
-import styles from './styles.module.scss';
 
 import { Snippet } from './Snippet';
 
@@ -14,6 +13,7 @@ type HitProps = {
 };
 
 export function Hit({ hit }: HitProps) {
+  
   return (
     <div>
       <Snippet hit={hit} attribute="name" />

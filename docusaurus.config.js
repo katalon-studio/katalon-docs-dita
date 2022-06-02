@@ -196,7 +196,7 @@ const config = {
               },
               {
                 label: 'Docs',
-                to: '/docs',
+                to: '/',
               },
               {
                 label: 'Community',

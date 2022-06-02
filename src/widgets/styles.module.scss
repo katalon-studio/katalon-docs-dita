@@ -1,0 +1,10 @@
+.noResult {
+    color: black;
+    font-size: 18px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+html[data-theme='dark'] .noResult {
+    color: white;
+}

@@ -25,6 +25,9 @@ html[data-theme='dark'] .formContainer {
 
 .inputSearch {
     color: #09223B;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 html[data-theme='dark'] .inputSearch {
