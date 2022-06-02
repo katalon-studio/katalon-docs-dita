@@ -11,8 +11,8 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Studio Enterprise',
-    Svg: require('@site/static/img/studio_enterprise.svg').default,
+    title: 'Studio',
+    Svg: require('@site/static/img/studio.svg').default,
     link: "docs/katalon-studio-enterprise/welcome-to-katalon-studio",
   },
   {
