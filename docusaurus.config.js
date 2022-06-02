@@ -192,7 +192,7 @@ const config = {
             items: [
               {
                 label: 'Help Center',
-                to: 'https://support.katalon.com/hc/en-us',
+                to: 'https://katalonsupport.force.com/katalonhelpcenter/s/',
               },
               {
                 label: 'Docs',
@@ -1147,7 +1147,7 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/",
+                "to": "/docs/products-and-licenses/katalon-studio-enterprise-and-runtime-engine-licenses/license-overview",
                 "from": [
                     "/katalon-studio/docs/license.html"
                 ]
