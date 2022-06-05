@@ -272,8 +272,15 @@ const config = {
             {
                 to: "/javadoc",
                 from: [
-                    "/javadoc/index.html",
-                    "/javadoc/"
+                    "/javadoc/index.html"
+                ]
+            },
+            {
+                to: "/docs",
+                from: [
+                    "/katalon-studio/docs/index.html",
+                    "/index.html",
+                    "/display/KD/"
                 ]
             },
             {

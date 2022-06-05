@@ -47,8 +47,8 @@
   color: #F19035;
 }
 .note_attention > .note__title::before {
-  content: "\e903";
-  color: #F19035;
+  content: "\e900";
+  color: #D92D20;
 }
 .note_caution > .note__title::before {
   content: "\e903";
@@ -157,12 +157,12 @@ html[data-theme='dark'] div.note.note_restriction {
 }
 
 div.note.note_attention {
-  background: #FDF8E3;
-  border-left: 4px solid #F19035;
+  background: #FCECE7;
+  border-left: 4px solid #D92D20;
 }
 
 html[data-theme='dark'] div.note.note_attention {
-  background: #55421D;
+  background: #511D1E;
 }
 
 div.note.note_caution {
@@ -273,7 +273,8 @@ html[data-theme='dark'] div.note code.ph.codeph, div.note div.pre.codeblock {
   position: absolute;
 	top: 0;
 	left: 20px;
-	content: "Notices";
+	content: "Known Issues";
+  width: 120px;
 }
 
 .note_restriction > .note__title::after {
