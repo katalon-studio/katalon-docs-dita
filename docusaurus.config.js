@@ -272,7 +272,8 @@ const config = {
             {
                 to: "/javadoc",
                 from: [
-                    "/javadoc/index.html"
+                    "/javadoc/index.html",
+                    "/javadoc/"
                 ]
             },
             {
