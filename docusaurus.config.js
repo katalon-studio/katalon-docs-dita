@@ -277,6 +277,14 @@ const config = {
                 ]
             },
             {
+                to: "/docs",
+                from: [
+                    "/katalon-studio/docs/index.html",
+                    "/index.html",
+                    "/display/KD/"
+                ]
+            },
+            {
                 "to": "/docs/katalon-recorder/get-started/overview",
                 "from": [
                     "/katalon-recorder/docs/overview.html",
