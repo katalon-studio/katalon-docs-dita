@@ -71,7 +71,7 @@ const config = {
             items: [
                 {
                     label: 'Katalon Studio',
-                    to: 'https://api-docs.katalon.com/',
+                    to: 'https://api-docs.katalon.com/?t=1',
                     className: 'bar-items-text',
                 },
                 {
