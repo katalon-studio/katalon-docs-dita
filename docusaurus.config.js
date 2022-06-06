@@ -6303,7 +6303,7 @@ const config = {
                 "from": [
                     "/katalon-studio/docs/ws-validate-graphql-body-schema.html"
                 ]
-            }
+            },
             {
                 "to": "/docs/katalon-testops/visual-testing/use-testops-visual-testing",
                 "from": [
