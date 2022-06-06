@@ -6304,6 +6304,12 @@ const config = {
                     "/katalon-studio/docs/ws-validate-graphql-body-schema.html"
                 ]
             }
+            {
+                "to": "/docs/katalon-testops/visual-testing/use-testops-visual-testing",
+                "from": [
+                    "/katalon-analytics/docs/ks-visual-testing.html"
+                ]
+            }
         ],
       },
     // highlight-end
