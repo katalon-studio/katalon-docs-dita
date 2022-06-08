@@ -25,7 +25,7 @@ export function Snippet<THit extends AlgoliaHit<Record<string, unknown>>>({
   const idxDocs = hit.url.indexOf("docs/") != -1 ? hit.url.indexOf("docs/") : hit.url.indexOf("docs#");
   const urlParent = hit.url.slice(idxDocs + 5);
   const idxSplash = urlParent.indexOf("/") != -1 ? urlParent.indexOf("/") : urlParent.length;
-  const parentDoc = urlParent.slice(0, idxSplash).replaceAll("-", " ");
+  const parentDoc = urlParent.slice(0, idxSplash).split("-").join(" ");
 
   return textArray != null && (
     <div className={styles.resultLinkContainer}>
