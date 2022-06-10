@@ -924,7 +924,7 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-testops/settings/api-keys",
+                "to": "/docs/katalon-testops/settings/katalon-api-key-in-katalon-testops",
                 "from": [
                     "/katalon-analytics/docs/ka-api-key.html"
                 ]
