@@ -1387,7 +1387,7 @@ const config = {
             {
                 "to": "/docs/katalon-runtime-engine/cicd-tools-integration/jenkins-integration/use-katalon-plugins-for-jenkins-integration/use-katalon-plugins-for-jenkins-integration-on-windowsmacos",
                 "from": [
-                    "/katalon-studio/docs/katalon-plugin-jenkins-window-macOS.html"
+                    "/katalon-studio/docs/katalon-plugin-jenkins-window-macOS.html",
                     "/katalon-studio/docs/jenkins-integration.html"
                 ]
             },
