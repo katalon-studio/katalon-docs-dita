@@ -47,11 +47,15 @@ export function Autocomplete({
   ] = useState<SetInstantSearchUiStateOptions>({ query });
   const debouncedSetInstantSearchUiState = debounce(
     setInstantSearchUiState,
-    500
+    0
   );
 
   useEffect(() => {
-    setQuery(instantSearchUiState.query);
+    if (instantSearchUiState.query !== "") {
+      setQuery(instantSearchUiState.query);
+    } else {
+      hideResult(true);
+    }
   }, [instantSearchUiState]);
 
   useEffect(() => {

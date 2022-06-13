@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
@@ -50,21 +50,6 @@ function search(hide, setHide, searchClient, siteConfig) {
 }
 
 var searchClient;
-
-const useScript = url => {
-  useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = url;
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, [url]);
-};
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
