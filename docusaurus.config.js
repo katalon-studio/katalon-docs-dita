@@ -653,7 +653,8 @@ const config = {
                     "/katalon-analytics/docs/create-plan.html",
                     "/katalon-analytics/docs/view-ci-plans.html",
                     "/katalon-analytics/docs/grid-testops-cloud.html",
-                    "/katalon-analytics/docs/kt-remote-execution.html"
+                    "/katalon-analytics/docs/kt-remote-execution.html",
+                    "/katalon-studio/docs/schedule-tests-to-execute.html"
                 ]
             },
             {
