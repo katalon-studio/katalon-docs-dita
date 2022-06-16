@@ -23,7 +23,7 @@ function FooterLeftView(copyright) {
         <p>FOLLOW US</p>
         <div className={styles.footerSocialView}>
           <a className={styles.footerLinkSocial} href="https://www.facebook.com/katalonstudio" target="_blank"><SvgFacebook className={styles.footerSocialFBImg}/></a>
-          <a className={styles.footerLinkSocial} href="https://twitter.com/katalon_studio" target="_blank"><SvgTwitter className={styles.footerSocialImg}/></a>
+          <a className={styles.footerLinkSocial} href="https://twitter.com/KatalonPlatform" target="_blank"><SvgTwitter className={styles.footerSocialImg}/></a>
           <a className={styles.footerLinkSocial} href="https://www.linkedin.com/company/katalon/" target="_blank"><SvgLinkedin className={styles.footerSocialImg}/></a>
           <a className={styles.footerLinkSocial} href="https://www.youtube.com/c/KatalonStudio/" target="_blank"><SvgYoutube className={styles.footerSocialImg}/></a>
         </div>
