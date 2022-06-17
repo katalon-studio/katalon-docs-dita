@@ -276,6 +276,55 @@ const config = {
                 ]
             },
             {
+                to: "/docs/katalon-studio-enterprise/welcome-to-katalon-studio",
+                from: [
+                    "/docs/katalon-studio-enterprise/index.html",
+                    "/docs/katalon-studio-enterprise"
+                ]
+            },
+            {
+                to: "/docs/katalon-testops/overview/testops-overview",
+                from: [
+                    "/docs/katalon-testops/index.html",
+                    "/docs/katalon-testops"
+                ]
+            },
+            {
+                to: "/docs/katalon-runtime-engine/introduction-to-runtime-engine",
+                from: [
+                    "/docs/katalon-runtime-engine/index.html",
+                    "/docs/katalon-runtime-engine"
+                ]
+            },
+            {
+                to: "/docs/katalon-testcloud/overview",
+                from: [
+                    "/docs/katalon-testcloud/index.html",
+                    "/docs/katalon-testcloud"
+                ]
+            },
+            {
+                to: "/docs/katalon-recorder/get-started/overview",
+                from: [
+                    "/docs/katalon-recorder/index.html",
+                    "/docs/katalon-recorder"
+                ]
+            },
+            {
+                to: "/docs/katalium-framework/overview",
+                from: [
+                    "/docs/katalium-framework/index.html",
+                    "/docs/katalium-framework"
+                ]
+            },
+            {
+                to: "/docs/katalium-server/overview",
+                from: [
+                    "/docs/katalium-server/index.html",
+                    "/docs/katalium-server"
+                ]
+            },
+            {
                 to: "/docs",
                 from: [
                     "/katalon-studio/docs/index.html",
