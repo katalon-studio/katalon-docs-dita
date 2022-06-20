@@ -95,7 +95,7 @@ const config = {
           },
           {
             to: 'https://www.katalon.com/download/',
-            label: 'Download now',
+            label: 'Start Now',
             position: 'right',
             className: 'bar-items-download',
           },
