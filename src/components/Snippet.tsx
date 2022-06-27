@@ -16,11 +16,12 @@ export function Snippet<THit extends AlgoliaHit<Record<string, unknown>>>({
   hit
 }: HighlightProps<THit>) {
   const type = hit.type;
+
   var textArray;
   if (type === "content") {
-    textArray = hit._highlightResult.content.value.split(/<mark>(.*?)<\/mark>/g);
+    textArray = hit._highlightResult.content.value.split(/__aa-highlight__(.*?)__\/aa-highlight__/g);
   } else {
-    textArray = hit._highlightResult.hierarchy[type].value.split(/<mark>(.*?)<\/mark>/g);
+    textArray = hit._highlightResult.hierarchy[type].value.split(/__aa-highlight__(.*?)__\/aa-highlight__/g);
   }
   const idxDocs = hit.url.indexOf("docs/") != -1 ? hit.url.indexOf("docs/") : hit.url.indexOf("docs#");
   const urlParent = hit.url.slice(idxDocs + 5);

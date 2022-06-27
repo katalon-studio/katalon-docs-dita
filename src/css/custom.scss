@@ -24,6 +24,8 @@
   --ifm-code-font-size: 95%;
   --ifm-menu-color: #243B53;
   --aa-primary-color-rgb: #486581 !important;
+  --aa-scrollbar-track-background-color-rgb: 255, 255, 255 !important;
+  --aa-scrollbar-thumb-background-color-rgb: 127, 127, 127 !important;
   .menu__link--sublist-caret:after {
     background: var(--ifm-menu-link-sublist-icon) 50% / 1.5rem 1.5rem;
   }
@@ -40,6 +42,8 @@ html[data-theme='dark'] {
   --ifm-color-primary-lightest: #7FD6FF;
   --ifm-menu-color: white;
   --aa-primary-color-rgb: #F5F6F7;
+  --aa-scrollbar-track-background-color-rgb: 68, 70, 75 !important;
+  --aa-scrollbar-thumb-background-color-rgb: 162, 163, 165 !important;
   .menu__link--sublist-caret:after {
     background: var(--ifm-menu-link-sublist-icon) 50% / 1.5rem 1.5rem;
   }
@@ -174,4 +178,8 @@ html[data-theme='dark'] .rating-icons {
     border: 1px solid white !important;
   }
 
+}
+
+.aa-GradientBottom {
+  height: 0px !important;
 }
