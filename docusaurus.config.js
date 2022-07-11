@@ -2190,13 +2190,14 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/create-tests-and-projects/configure-test-cases/mobile-testing/ios/mobile-install-webdriveragent-for-ios-devices",
+                "to": "/docs/katalon-studio-enterprise/create-tests-and-projects/configure-test-cases/mobile-testing/ios/mobile-install-webdriveragent-for-real-ios-devices",
                 "from": [
                     "/katalon-studio/docs/installing-webdriveragent-for-ios-devices.html",
                     "/display/KD/Installing+WebDriverAgent+for+iOS+devices/",
                     "/display/KD/Installing%20WebDriverAgent%20for%20iOS%20devices/",
                     "/x/TwbR/",
-                    "/katalon-studio/docs/installing-webdriveragent-for-ios-devices/"
+                    "/katalon-studio/docs/installing-webdriveragent-for-ios-devices/",
+                    "/docs/katalon-studio-enterprise/create-tests-and-projects/configure-test-cases/mobile-testing/ios/mobile-install-webdriveragent-for-ios-devices"
                 ]
             },
             {
