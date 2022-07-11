@@ -56,7 +56,7 @@ export default function FooterLayout({style, links, logo, copyright}) {
           </div>
         )}
         <div className={styles.footerContainerPrivacy}>
-             <a href="https://katalon.com/terms" target="_blank" style={{ textDecoration: "none" }}><p className={styles.footerTermText}>Temrs of Use</p></a>
+             <a href="https://katalon.com/terms" target="_blank" style={{ textDecoration: "none" }}><p className={styles.footerTermText}>Terms</p></a>
              <a href="https://katalon.com/terms#privacy-policy" target="_blank" style={{ textDecoration: "none" }}><p className={styles.footerPrivacyText}>Privacy Policy</p></a>
              <a href="https://katalon.com/terms#license-agreement" target="_blank" style={{ textDecoration: "none" }}><p className={styles.footerPrivacyText}>License Agreement</p></a>
              <a href="https://katalon.com/security/" target="_blank" style={{ textDecoration: "none" }}><p className={styles.footerPrivacyText}>Security</p></a>
