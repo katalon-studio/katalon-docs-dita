@@ -1782,6 +1782,7 @@ const config = {
                     "/katalon-studio/docs/katalon-preferences.html",
                     "/display/KD/Katalon+Studio+Preferences/",
                     "/display/KD/Katalon%20Studio%20Preferences/",
+                    "/x/hw1O",
                     "/x/NQRO/",
                     "/katalon-studio/docs/katalon-studio-preferences/",
                     "/x/YYUw/",
