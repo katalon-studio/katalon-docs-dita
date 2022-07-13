@@ -1573,9 +1573,10 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-testcloud/overview",
+                "to": "/docs/katalon-testcloud/testcloud-overview",
                 "from": [
-                    "/katalon-testcloud/docs/testcloud-overview.html"
+                    "/katalon-testcloud/docs/testcloud-overview.html",
+                    "/docs/katalon-testcloud/overview"
                 ]
             },
             {
@@ -1765,9 +1766,10 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/set-up-katalon-studio/keyboard-shortcuts",
+                "to": "/docs/katalon-studio-enterprise/set-up-katalon-studio/keyboard-shortcuts-in-katalon-studio",
                 "from": [
-                    "/katalon-studio/docs/keyboard-shortcuts.html"
+                    "/katalon-studio/docs/keyboard-shortcuts.html",
+                    "/docs/katalon-studio-enterprise/set-up-katalon-studio/keyboard-shortcuts"
                 ]
             },
             {
@@ -2254,11 +2256,12 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-design/mobile-test-design/mobile-record-and-spy-utilities/an-introduction-to-katalon-mobile-recorder",
+                "to": "/docs/katalon-studio-enterprise/test-design/mobile-test-design/mobile-record-and-spy-utilities/introduction-to-mobile-recorder-in-katalon-studio",
                 "from": [
                     "/katalon-studio/docs/katalon_mobile_recorder_introduction.html",
                     "/katalon-studio/tutorials/katalon_mobile_recorder_introduction.html",
-                    "/katalon-studio/tutorials/mobile-testing/index.html"
+                    "/katalon-studio/tutorials/mobile-testing/index.html",
+                    "/docs/katalon-studio-enterprise/test-design/mobile-test-design/mobile-record-and-spy-utilities/an-introduction-to-katalon-mobile-recorder"
                 ]
             },
             {
@@ -2616,20 +2619,22 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/authorization",
+                "to": "/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/authorization-in-katalon-studio",
                 "from": [
                     "/katalon-studio/docs/authorization.html",
                     "/display/KD/Authorization/",
                     "/x/Ew-R/",
-                    "/katalon-studio/docs/authorization/"
+                    "/katalon-studio/docs/authorization/",
+                    "/docs/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/authorization"
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/authorization-basic",
+                "to": "/docs/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/basic-authentication",
                 "from": [
                     "/katalon-studio/docs/authorization-basic.html",
                     "/display/KD/Authorization-basic/",
-                    "/katalon-studio/docs/authorization-basic/"
+                    "/katalon-studio/docs/authorization-basic/",
+                    "/docs/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/authorization-basic"
                 ]
             },
             {
@@ -6123,21 +6128,24 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/validate-json-xml-string-against-a-schema-for-api-testing-poc/ws-validate-an-xml-string-against-a-schema-poc",
+                "to": "/docs/katalon-studio-enterprise/keywords/web-service-keywords/ws-validate-an-xml-string-against-a-schema",
                 "from": [
-                    "/katalon-studio/docs/ws-validate-xml-schema.html"
+                    "/katalon-studio/docs/ws-validate-xml-schema.html",
+                    "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/validate-json-xml-string-against-a-schema-for-api-testing-poc/ws-validate-an-xml-string-against-a-schema-poc"
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/validate-json-xml-string-against-a-schema-for-api-testing-poc/ws-validate-json-string-against-a-schema-poc",
+                "to": "/docs/katalon-studio-enterprise/keywords/web-service-keywords/ws-validate-json-string-against-a-schema",
                 "from": [
-                    "/katalon-studio/docs/ws-validate-json-schema.html"
+                    "/katalon-studio/docs/ws-validate-json-schema.html",
+                    "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/validate-json-xml-string-against-a-schema-for-api-testing-poc/ws-validate-json-string-against-a-schema-poc"
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/graphql-poc/graphql-poc",
+                "to": "/docs/katalon-studio-enterprise/test-design/web-services-test-design/graphql",
                 "from": [
-                    "/katalon-studio/docs/graphql.html"
+                    "/katalon-studio/docs/graphql.html",
+                    "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/graphql-poc/graphql-poc"
                 ]
             },
             {
@@ -6346,15 +6354,17 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/validate-json-xml-string-against-a-schema-for-api-testing-poc/validate-jsonxml-string-against-a-schema-for-api-testing-poc",
+                "to": "/docs/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/schema-compliance-testing-in-katalon-studio",
                 "from": [
-                    "/katalon-studio/docs/schema-validation.html"
+                    "/katalon-studio/docs/schema-validation.html",
+                    "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/validate-json-xml-string-against-a-schema-for-api-testing-poc/validate-jsonxml-string-against-a-schema-for-api-testing-poc"
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/graphql-poc/ws-validate-graphql-request-body-against-a-graphql-schema-poc",
+                "to": "/docs/katalon-studio-enterprise/keywords/web-service-keywords/ws-validate-graphql-request-against-a-graphql-schema",
                 "from": [
-                    "/katalon-studio/docs/ws-validate-graphql-body-schema.html"
+                    "/katalon-studio/docs/ws-validate-graphql-body-schema.html",
+                    "/docs/katalon-studio-enterprise/extend-katalon-studio/proof-of-concept/graphql-poc/ws-validate-graphql-request-body-against-a-graphql-schema-poc"
                 ]
             },
             {
