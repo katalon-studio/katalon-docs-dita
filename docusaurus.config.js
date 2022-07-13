@@ -297,13 +297,6 @@ const config = {
                 ]
             },
             {
-                to: "/docs/katalon-testcloud/overview",
-                from: [
-                    "/docs/katalon-testcloud/index.html",
-                    "/docs/katalon-testcloud"
-                ]
-            },
-            {
                 to: "/docs/katalon-recorder/get-started/overview",
                 from: [
                     "/docs/katalon-recorder/index.html",
@@ -2620,7 +2613,7 @@ const config = {
                 ]
             },
             {
-                "to": "/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/authorization-in-katalon-studio",
+                "to": "/docs/katalon-studio-enterprise/test-design/web-services-test-design/working-with-apiweb-services-project/authorization-in-katalon-studio",
                 "from": [
                     "/katalon-studio/docs/authorization.html",
                     "/display/KD/Authorization/",
