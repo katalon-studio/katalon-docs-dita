@@ -5360,7 +5360,7 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-execution/test-suite/test-suite",
+                "to": "/docs/katalon-studio-enterprise/test-execution/test-suite/manage-test-cases-in-test-suites",
                 "from": [
                     "/katalon-studio/docs/create-test-suite.html",
                     "/katalon-studio/docs/design-a-test-suite.html",
@@ -5368,11 +5368,12 @@ const config = {
                     "/display/KD/Design%20a%20Test%20Suite/",
                     "/x/mAvR/",
                     "/katalon-studio/docs/design-a-test-suite/",
-                    "/katalon-studio/docs/test-suite.html/"
+                    "/katalon-studio/docs/test-suite.html/",
+                    "/docs/katalon-studio-enterprise/test-execution/test-suite/test-suite"
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-execution/test-suite/test-suite-collection",
+                "to": "/docs/katalon-studio-enterprise/test-execution/test-suite/manage-test-suites-in-test-suite-collections",
                 "from": [
                     "/katalon-studio/docs/test-suite-collection.html",
                     "/display/KD/Test+Suite+Collection/",
@@ -5383,13 +5384,14 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-execution/test-suite/dynamic-test-suite-in-katalon-studio",
+                "to": "/docs/katalon-studio-enterprise/test-execution/test-suite/manage-test-cases-in-dynamic-test-suites-with-katalon-studio",
                 "from": [
                     "/katalon-studio/docs/dynamic-test-suite-ks.html",
                     "/katalon-studio/docs/dynamic-test-suite.html",
                     "/katalon-studio/docs/dynamic-querying-test-suite/",
                     "/katalon-studio/docs/dynamic+querying+test+suite/",
-                    "/katalon-studio/docs/dynamic%20querying%20test%20suite/"
+                    "/katalon-studio/docs/dynamic%20querying%20test%20suite/",
+                    "/docs/katalon-studio-enterprise/test-execution/test-suite/dynamic-test-suite-in-katalon-studio"
                 ]
             },
             {
@@ -5851,9 +5853,10 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/integration/rally-integration",
+                "to": "/docs/katalon-studio-enterprise/integration/configure-rally-integration-in-katalon-studio",
                 "from": [
-                    "/katalon-studio/docs/rally-integration.html"
+                    "/katalon-studio/docs/rally-integration.html",
+                    "/docs/katalon-studio-enterprise/integration/rally-integration"
                 ]
             },
             {
@@ -5884,11 +5887,12 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/integration/testrail-integration",
+                "to": "/docs/katalon-studio-enterprise/integration/configure-testrail-integration-in-katalon-studio",
                 "from": [
                     "/katalon-studio/docs/testrail-integration.html",
                     "/katalon-studio/docs/katalon-testrail-integration.html",
-                    "/katalon-studio/tutorials/katalon-testrail-integration.html"
+                    "/katalon-studio/tutorials/katalon-testrail-integration.html",
+                    "/docs/katalon-studio-enterprise/integration/testrail-integration"
                 ]
             },
             {
