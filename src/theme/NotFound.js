@@ -14,8 +14,15 @@ export default function NotFound() {
       window.location.href = href.replace(origin + "/javadoc", 'https://api-docs.katalon.com');
     } else {
       setLoaded(true);
+      analytics.track('Page 404');
+      setTimeout(function() {
+        window.location.href = 'https://docs.katalon.com';
+      }, 5000);
     }
   }, []);
+
+  const SvgNotFound = require('@site/static/img/ic_404.svg').default;
+
   return (
     <>{loaded ? (<>
       <PageMetadata
@@ -26,31 +33,18 @@ export default function NotFound() {
       />
       <Layout>
         <main className="container margin-vert--xl">
-          <div className="row">
-            <div className="col col--6 col--offset-3">
-              <h1 className="hero__title">
-                <Translate
-                  id="theme.NotFound.title"
-                  description="The title of the 404 page">
-                  Page Not Found
-                </Translate>
-              </h1>
-              <p>
-                <Translate
-                  id="theme.NotFound.p1"
-                  description="The first paragraph of the 404 page">
-                  We could not find what you were looking for.
-                </Translate>
-              </p>
-              <p>
-                <Translate
-                  id="theme.NotFound.p2"
-                  description="The 2nd paragraph of the 404 page">
-                  Please contact the owner of the site that linked you to the
-                  original URL and let them know their link is broken.
-                </Translate>
-              </p>
-            </div>
+          <div className="row" style={{ display: "block", textAlign: "center" }}>
+            <h3 className="hero__title" style={{ fontSize: "36px", textAlign: "center", fontWeight: "500", lineHeight: "50px" }}>
+              <Translate
+                id="theme.NotFound.title"
+                description="The title of the 404 page">
+                Oops! That page can’t be found.
+              </Translate>
+            </h3>
+            <SvgNotFound />
+            <p style={{ fontSize: "24px", textAlign: "center", fontWeight: "400", lineHeight: "30px", marginTop: "30px" }}>
+              Redirecting you to the home page...
+            </p>
           </div>
         </main>
       </Layout>
