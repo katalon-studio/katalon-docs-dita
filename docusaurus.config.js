@@ -94,7 +94,7 @@ const config = {
             className: 'bar-items-text',
           },
           {
-            to: 'https://www.katalon.com/download/',
+            to: 'https://katalon.com/docs-start-now',
             label: 'Start Now',
             position: 'right',
             className: 'bar-items-download',
