@@ -2485,15 +2485,11 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-design/web-test-design/web-record-and-spy-utilities/record-with-chrome-using-packed-extension",
-                "from": [
-                    "/katalon-studio/docs/record-web-utility-using-chrome-with-profile.html"
-                ]
-            },
-            {
                 "to": "/docs/katalon-studio-enterprise/test-design/web-test-design/web-record-and-spy-utilities/katalon-compact-utility",
                 "from": [
-                    "/katalon-studio/docs/katalon-compact-utility.html"
+                    "/katalon-studio/docs/katalon-compact-utility.html",
+                    "/docs/katalon-studio-enterprise/test-design/web-test-design/web-record-and-spy-utilities/record-with-chrome-using-packed-extension",
+                    "/katalon-studio/docs/record-web-utility-using-chrome-with-profile.html"
                 ]
             },
             {
