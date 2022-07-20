@@ -20,6 +20,27 @@
   color: #000;
 }
 
+html[data-theme='dark'] .prereq::before,
+html[data-theme='dark'] .postreq::before,
+html[data-theme='dark'] .steps::before,
+html[data-theme='dark'] .steps-unordered::before,
+html[data-theme='dark'] .stepsection,
+html[data-theme='dark'] .cause::before,
+html[data-theme='dark'] .remedy::before,
+html[data-theme='dark'] .condition::before,
+html[data-theme='dark'] .context::before,
+html[data-theme='dark'] .result::before,
+html[data-theme='dark'] .tasktroubleshooting::before,
+html[data-theme='dark'] .example::before {
+  display: block;
+  clear: both;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.025em;
+  color: #fff;
+}
+
 /* Fix the placement of cause, remedy, and condition captions. 
 .cause::before,
 .remedy::before {

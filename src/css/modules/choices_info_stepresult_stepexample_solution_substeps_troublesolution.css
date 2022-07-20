@@ -33,6 +33,16 @@ Span the left border across the cause and remedy elements.
   color: #000;
 }
 
+html[data-theme='dark'] .stepresult::before,
+html[data-theme='dark'] .info::before,
+html[data-theme='dark'] .stepxmp::before,
+html[data-theme='dark'] .steptroubleshooting {
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.025em;
+  color: #fff;
+}
+
 /* Add a caption before info elements. 
 .info::before {
   content: "Info: ";
