@@ -2800,7 +2800,7 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/test-design/bdd-testing-framework-cucumber-integration/bdd-testing-framework-cucumber-integration",
+                "to": "/docs/katalon-studio-enterprise/test-design/bdd-testing-framework-cucumber-integration/bdd-testing-framework-cucumber-integration-in-katalon-studio",
                 "from": [
                     "/katalon-studio/docs/cucumber-features-file.html",
                     "/display/KD/Cucumber+Features+File/",
@@ -2816,7 +2816,8 @@ const config = {
                     "/display/KD/Step%20Definitions/",
                     "/x/OxLR/",
                     "/katalon-studio/docs/step-definitions/",
-                    "/katalon-studio/docs/step-definitions.html"
+                    "/katalon-studio/docs/step-definitions.html",
+                    "/docs/katalon-studio-enterprise/test-design/bdd-testing-framework-cucumber-integration/bdd-testing-framework-cucumber-integration"
                 ]
             },
             {
