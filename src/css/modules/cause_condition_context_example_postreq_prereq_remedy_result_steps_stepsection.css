@@ -111,9 +111,19 @@ article:not(.process) .steps-unordered::before {
   display: none;
 }
 
+html[data-theme='dark'] .stepsection ~ .steps::before,
+html[data-theme='dark'] .stepsection ~ .steps-unordered::before {
+  display: none;
+}
+
 /* Remove the caption before steps in troubleshooting topics. */
 .remedy .steps::before,
 .remedy .steps-unordered::before {
+  display: none;
+}
+
+html[data-theme='dark'] .remedy .steps::before,
+html[data-theme='dark'] .remedy .steps-unordered::before {
   display: none;
 }
 
