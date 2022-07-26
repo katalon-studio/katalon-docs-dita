@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'TestCloud',
     Svg: require('@site/static/img/testcloud.svg').default,
-    link: "docs/katalon-testcloud/overview",
+    link: "docs/katalon-testcloud/testcloud-overview",
   },
   {
     title: 'TestOps',
