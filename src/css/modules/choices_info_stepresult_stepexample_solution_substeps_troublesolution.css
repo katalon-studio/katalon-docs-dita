@@ -49,15 +49,15 @@ html[data-theme='dark'] .steptroubleshooting {
 }
 */
 
-/* Add a caption before step example and example elements. */
+/* Add a caption before step example and example elements.
 .stepxmp::before {
   content: "Example: ";
-}
+} */
 
-/* Add a caption before stepresult and result elements. */
+/* Add a caption before stepresult and result elements.
 .stepresult::before{
   content: "Result: ";
-}
+} */
 
 /* Add a task label before steptroubleshooting elements. */
 .steptroubleshooting::before {
