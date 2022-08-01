@@ -708,11 +708,12 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-testops/test-planning/releases",
+                "to": "/docs/katalon-testops/test-planning/create-and-edit-releases-in-testops",
                 "from": [
                     "/katalon-analytics/docs/kt-release.html",
                     "/katalon-analytics/docs/release.html",
-                    "/katalon-analytics/docs/kt-jira-release.html"
+                    "/katalon-analytics/docs/kt-jira-release.html",
+                    "/docs/katalon-testops/test-planning/releases"
                 ]
             },
             {
@@ -837,45 +838,51 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/test-activities-dashboard",
+                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/test-activities-reports",
                 "from": [
-                    "/katalon-analytics/docs/dashboard-test-activities.html"
+                    "/katalon-analytics/docs/dashboard-test-activities.html",
+                    "/docs/katalon-testops/reporting/view-testops-dashboard/test-activities-dashboard"
                 ]
             },
             {
-                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/release-readiness-dashboard",
+                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/release-readiness-reports",
                 "from": [
-                    "/katalon-analytics/docs/dashboard-release-readiness.html"
+                    "/katalon-analytics/docs/dashboard-release-readiness.html",
+                    "/docs/katalon-testops/reporting/view-testops-dashboard/release-readiness-dashboard"
                 ]
             },
             {
-                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/productivity-dashboard",
+                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/productivity-reports",
                 "from": [
                     "/katalon-analytics/docs/dashboard-productivity.html"
                 ]
             },
             {
-                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/quality-dashboard",
+                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/quality-reports",
                 "from": [
-                    "/katalon-analytics/docs/dashboard-quality.html"
+                    "/katalon-analytics/docs/dashboard-quality.html",
+                    "/docs/katalon-testops/reporting/view-testops-dashboard/quality-dashboard"
                 ]
             },
             {
-                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/platform-coverage-dashboard",
+                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/platform-coverage-reports",
                 "from": [
-                    "/katalon-analytics/docs/dashboard-platform-coverage.html"
+                    "/katalon-analytics/docs/dashboard-platform-coverage.html",
+                    "/docs/katalon-testops/reporting/view-testops-dashboard/platform-coverage-dashboard"
                 ]
             },
             {
-                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/requirement-coverage-dashboard",
+                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/requirement-coverage-reports",
                 "from": [
-                    "/katalon-analytics/docs/dashboard-requirement-coverage.html"
+                    "/katalon-analytics/docs/dashboard-requirement-coverage.html",
+                    "/docs/katalon-testops/reporting/view-testops-dashboard/requirement-coverage-dashboard"
                 ]
             },
             {
-                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/local-test-environment-dashboard",
+                "to": "/docs/katalon-testops/reporting/view-testops-dashboard/local-test-environment-reports",
                 "from": [
-                    "/katalon-analytics/docs/dashboard-local-test-environment.html"
+                    "/katalon-analytics/docs/dashboard-local-test-environment.html",
+                    "/docs/katalon-testops/reporting/view-testops-dashboard/local-test-environment-dashboard"
                 ]
             },
             {
@@ -1598,9 +1605,10 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-testcloud/troubleshooting/tests-not-loading-when-executing-with-chrome-version-9394-in-windows",
+                "to": "/docs/katalon-testcloud/troubleshooting/tests-not-loading-when-executing-with-chrome-version-92-93-94-in-windows",
                 "from": [
-                    "/katalon-testcloud/docs/troubleshoot-test-execution-chrome-93-94.html"
+                    "/katalon-testcloud/docs/troubleshoot-test-execution-chrome-93-94.html",
+                    "/docs/katalon-testcloud/troubleshooting/tests-not-loading-when-executing-with-chrome-version-9394-in-windows"
                 ]
             },
             {
@@ -5917,10 +5925,11 @@ const config = {
                 ]
             },
             {
-                "to": "/docs/katalon-studio-enterprise/integration/integration-with-azure-devops-test-plans",
+                "to": "/docs/katalon-studio-enterprise/integration/configure-azure-devops-test-plans-integration-in-katalon-studio",
                 "from": [
                     "/katalon-studio/docs/azure-devops-test-plans.html",
-                    "/katalon-studio/docs/azure-devops-integration.html"
+                    "/katalon-studio/docs/azure-devops-integration.html",
+                    "/docs/katalon-studio-enterprise/integration/integration-with-azure-devops-test-plans"
                 ]
             },
             {
