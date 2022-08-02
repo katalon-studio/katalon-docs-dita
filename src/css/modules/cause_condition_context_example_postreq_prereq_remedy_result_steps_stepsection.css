@@ -20,6 +20,17 @@
   color: #000;
 }
 
+/* Style the reltable title. */
+.related-links {
+  font-size: 20px !important;
+}
+
+/* Style the font size for link list text */
+ul .linklist {
+  font-size: 16px !important;
+}
+
+/* Enable dark theme for steps headings */
 html[data-theme='dark'] .prereq::before,
 html[data-theme='dark'] .postreq::before,
 html[data-theme='dark'] .steps::before,

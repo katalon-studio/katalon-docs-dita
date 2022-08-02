@@ -64,7 +64,7 @@ li.substep {
 /* Fix the position of result and example elements. */
 .result,
 .example {
-  margin: 0px 0px 5px 13px;
+  margin: 0px 0px 5px 0px;
   padding: 2.5px 0px 0.5px 21px;
 }
 
